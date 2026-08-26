@@ -168,7 +168,6 @@ svg { display: block; }
   outline-offset: 3px;
 }
 
-.prova__grid > *,
 .imoveis__grid > *,
 .depoimentos__grid > *,
 .footer__grid > *,
@@ -490,38 +489,6 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   .hero__headline { max-width: 20ch; }
 }
 
-/* ---------- Prova ---------- */
-.prova {
-  background: var(--areia);
-  padding-block: var(--gap-section);
-}
-.prova__grid {
-  margin-top: 48px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 24px;
-}
-@media (min-width: 900px) {
-  .prova__grid { grid-template-columns: repeat(4, 1fr); gap: 32px; }
-}
-.stat__number {
-  font-family: var(--font-inst);
-  font-weight: 200;
-  font-size: clamp(2.1rem, 1.7rem + 1.6vw, 3.2rem);
-  color: var(--musgo);
-  line-height: 1;
-}
-.stat__label {
-  margin-top: 14px;
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--claro);
-  max-width: 18ch;
-}
-.stat { min-width: 0; }
-.stat__number, .stat__label { overflow-wrap: break-word; word-break: break-word; }
-
 /* ---------- Como funciona ---------- */
 .metodo {
   background: var(--papel);
@@ -714,7 +681,7 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
 
 /* ---------- História (usa o mesmo layout foto+texto do Sobre) ---------- */
 .historia {
-  background: var(--papel);
+  background: var(--areia);
   padding-block: var(--gap-section);
 }
 

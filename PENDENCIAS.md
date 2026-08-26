@@ -24,14 +24,6 @@ Usei `https://www.feliperamalho.com.br/` como placeholder de domínio no
 o domínio real ainda não foi definido. Assim que o domínio existir, substitua essas
 quatro ocorrências em `index.html`.
 
-## Números de prova (seção "Prova")
-
-Quatro números marcados como `[PLACEHOLDER]` em `index.html`:
-- Anos de mercado em Maringá
-- Imóveis intermediados
-- Ticket médio das negociações
-- Bairros de atuação
-
 ## Imóveis selecionados — agora com dados e fotos reais dos catálogos
 
 Usei os PDFs da pasta `catálagos/` (7 catálogos de empreendimento) para montar os
