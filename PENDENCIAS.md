@@ -5,24 +5,86 @@ Dados reais que eu não tinha e por isso deixei entre colchetes no código. Busq
 
 ## Contato (usado em vários lugares)
 
-- **`script.js`, linha 8** — `WHATSAPP_NUMBER`: coloque o número real do WhatsApp,
-  só dígitos, com DDI+DDD (ex.: `5544999998888"`). Esse é o único lugar que precisa
-  mudar — todos os botões "Falar no WhatsApp" do site usam essa constante.
-- **`index.html`** — `[TELEFONE]` (link `tel:` e JSON-LD), `[E-MAIL]` (link `mailto:`
-  e JSON-LD), `[ENDEREÇO]` (rodapé e JSON-LD).
+- **WhatsApp — resolvido.** `script.js` usa `554488281680` (+55 44 8828-1680) em
+  todo botão "Falar no WhatsApp" do site, com a mensagem fixa "Olá! Quero mais
+  informações sobre um imóvel!" (pedido por você via WhatsApp). Se o número ou a
+  mensagem mudarem de novo, é só editar a constante `WHATSAPP_NUMBER` e os textos
+  `data-wa-msg` — ambos centralizados, fácil de trocar.
+- **E-mail — resolvido.** `corretor.feliperamalho1@gmail.com` no rodapé (link
+  `mailto:`) e no JSON-LD, em `index.html` e `imoveis.html`.
+- **`index.html`** — `[TELEFONE]` (link `tel:` e JSON-LD) ainda pendente — não sei
+  se é o mesmo número do WhatsApp ou um contato separado (ex.: telefone fixo).
+  `[ENDEREÇO]` (rodapé e JSON-LD) também.
 - **CRECI** — `[Nº]` aparece na seção "Sobre o Felipe", no rodapé e no JSON-LD.
+
+## Filtro "Pronto" nos imóveis (feedback do cliente via WhatsApp)
+
+Adicionei abas de filtro na seção de imóveis (home e `imoveis.html`): Condomínio
+fechado, Studio, Médio, Alto padrão (100 m²+), Comercial e Pronto. As cinco primeiras
+já classificam os 6 imóveis pelos metros quadrados reais de cada catálogo. A aba
+"Pronto" eu deixei funcionando, mas **sem nenhum imóvel marcado nela** — nenhum dos
+catálogos que recebi confirma explicitamente que a obra está concluída (o Lagoon Home
+Club, por exemplo, tem entrega prevista para março/2030). Não quis marcar "pronto"
+chutando, porque isso pode configurar propaganda enganosa.
+
+Para ativar: me diga quais dos 6 (La Vie Concept, Quinta dos Plátanos, Floresta 23,
+Lagoon Home Club, Lithos, Office Cidade Aruna) já estão prontos, e eu adiciono
+`pronto` no atributo `data-category` do card/seção correspondente em `index.html` e
+`imoveis.html` (ex.: `data-category="studio pronto"`). Hoje, clicar em "Pronto" mostra
+uma mensagem convidando a pessoa a chamar no WhatsApp — não é um beco sem saída, mas
+também não é o ideal para sempre.
 
 ## Instagram
 
 Usei o handle **@feliperamalho.imoveis** porque ele aparece no próprio manual de
 marca (prancha 07). Se a conta mudou, atualize o link no rodapé.
 
-## Domínio / SEO técnico
+## SEO e recomendação por IA (pedido via WhatsApp)
 
-Usei `https://www.feliperamalho.com.br/` como placeholder de domínio no
-`<link rel="canonical">`, no Open Graph (`og:url`, `og:image`) e no JSON-LD, porque
-o domínio real ainda não foi definido. Assim que o domínio existir, substitua essas
-quatro ocorrências em `index.html`.
+Fiz uma passada de SEO técnico e de "otimização para IA" no site inteiro. O que
+mudou:
+
+- **`robots.txt`** (novo, na raiz): libera todos os buscadores, e libera
+  explicitamente os rastreadores de IA que hoje alimentam respostas de
+  assistentes (GPTBot/ChatGPT-User da OpenAI, ClaudeBot/anthropic-ai da
+  Anthropic, PerplexityBot, Google-Extended, Applebot-Extended, entre outros) —
+  isso é o que faz um site poder ser citado por essas ferramentas.
+- **`sitemap.xml`** (novo, na raiz): lista as duas páginas para os buscadores.
+- **`llms.txt`** (novo, na raiz): um resumo direto, em texto simples, de quem é
+  o Felipe, o que ele faz, área de atuação e contato — um formato que várias
+  ferramentas de IA já procuram para entender um site rapidamente.
+- **Título, descrição e redes sociais** (`<title>`, meta description, Open
+  Graph, Twitter Card) reescritos nas duas páginas para começar com a palavra-
+  chave certa: "Corretor de Imóveis de Alto Padrão em Maringá" na home,
+  "Imóveis de Alto Padrão à Venda em Maringá" na página de imóveis.
+- **Dados estruturados (JSON-LD)** — o formato que motores de busca e IAs usam
+  para entender fatos de um site com precisão, em vez de adivinhar pelo texto:
+  - `RealEstateAgent` mais completo: cargo, área de atuação, especialidades
+    (`knowsAbout`), e um catálogo (`hasOfferCatalog`) citando os 6
+    empreendimentos por nome.
+  - `FAQPage` com as 3 perguntas do FAQ que já têm resposta final — o Google
+    exige que o texto no schema seja idêntico ao texto visível na página, por
+    isso as outras 3 (que ainda têm `[colchete]` pendente) ficaram de fora.
+    Assim que você me passar as respostas completas, eu adiciono as 3 que
+    faltam.
+  - `ItemList` na página de imóveis, com nome, categoria, metragem e foto de
+    cada um dos 6 empreendimentos.
+  - Corrigi um problema real: o campo `telephone` do schema estava com
+    `[TELEFONE]` (texto quebrado) — troquei pelo número de WhatsApp
+    (+55 44 8828-1680), já que hoje é o único contato real que tenho. Se
+    você tiver um telefone separado (fixo, por exemplo), me avise que eu
+    ajusto. Também tirei o campo de endereço que estava com `[ENDEREÇO]`
+    quebrado — um endereço inválido em dado estruturado é pior do que não ter
+    o campo.
+- **Eyebrow do Hero e H1 da página de imóveis** ganharam a palavra "corretor" e
+  "Maringá" de forma mais direta, sem mudar o texto principal/persuasivo que já
+  existia (evitei "empanturrar" de palavra-chave, o Google penaliza isso).
+
+**Sobre o domínio**: todo esse trabalho aponta para `https://www.feliperamalho.com.br/`
+como placeholder — usado no `<link rel="canonical">`, no Open Graph, no JSON-LD
+(dois arquivos), no `sitemap.xml`, no `robots.txt` (linha `Sitemap:`) e no
+`llms.txt`. Assim que o domínio real existir, é só me falar que eu troco todas
+essas ocorrências de uma vez.
 
 ## Imóveis selecionados — agora com dados e fotos reais dos catálogos
 

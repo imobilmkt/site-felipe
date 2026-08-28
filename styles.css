@@ -273,6 +273,9 @@ h2.section-title {
   font-size: 1.05rem;
   letter-spacing: 0.26em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 .brand-tagline {
   font-family: var(--font-inst);
@@ -342,18 +345,80 @@ h2.section-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
 }
-.header-actions { display: flex; align-items: center; gap: 20px; }
-.header-nav-link {
+.header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+@media (min-width: 480px) { .header-actions { gap: 14px; } }
+@media (min-width: 640px) { .header-actions { gap: 20px; } }
+
+/* ---------- Botão de menu (hamburguer -> X) ---------- */
+.btn-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  color: inherit;
+}
+.btn-menu svg { width: 19px; height: 19px; overflow: visible; }
+@media (min-width: 480px) {
+  .btn-menu { width: 30px; height: 30px; }
+  .btn-menu svg { width: 21px; height: 21px; }
+}
+@media (min-width: 640px) {
+  .btn-menu { width: 34px; height: 34px; }
+  .btn-menu svg { width: 22px; height: 22px; }
+}
+.btn-menu .menu-line {
+  transform-box: view-box;
+  transition: transform .3s var(--ease), opacity .3s var(--ease);
+}
+.btn-menu.is-open .menu-line--top { transform: translateY(5px) rotate(45deg); }
+.btn-menu.is-open .menu-line--mid { opacity: 0; }
+.btn-menu.is-open .menu-line--bottom { transform: translateY(-5px) rotate(-45deg); }
+@media (prefers-reduced-motion: reduce) {
+  .btn-menu .menu-line { transition: none; }
+}
+.site-header .btn-menu { color: var(--areia); }
+.site-header.is-scrolled .btn-menu { color: var(--escuro); }
+body.page-solid-header .site-header .btn-menu { color: var(--escuro); }
+
+/* ---------- Painel de menu ---------- */
+.site-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--areia);
+  border-bottom: 1px solid var(--latao);
+  max-height: calc(100svh - 100%);
+  overflow-y: auto;
+}
+.site-menu[hidden] { display: none; }
+.site-menu__inner {
+  padding-block: 8px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.site-menu__inner a {
   font-family: var(--font-inst);
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  white-space: nowrap;
+  color: var(--escuro);
+  padding-block: 16px;
+  border-bottom: 1px solid var(--salvia);
 }
-.header-nav-link:hover, .header-nav-link:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 479px) { .header-nav-link { display: none; } }
+.site-menu__inner a:hover, .site-menu__inner a:focus-visible { color: var(--musgo); }
+
+.menu-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(46, 54, 39, 0.55);
+}
+.menu-scrim[hidden] { display: none; }
 .site-header.is-scrolled {
   background: var(--areia);
   padding-block: 12px;
@@ -361,12 +426,12 @@ h2.section-title {
 }
 .site-header .brand-mark { width: 26px; flex-shrink: 0; }
 .site-header .brand-lockup { gap: 9px; min-width: 0; }
-.site-header .brand-name { font-size: 0.66rem; }
+.site-header .brand-name { font-size: 0.58rem; }
 .site-header .brand-tagline { display: none; }
 .site-header .btn-wa {
-  padding: 8px 12px;
-  font-size: 0.66rem;
-  gap: 7px;
+  padding: 7px 10px;
+  font-size: 0.6rem;
+  gap: 6px;
   flex-shrink: 0;
 }
 .site-header .btn-wa svg { width: 14px; height: 14px; }
@@ -400,8 +465,6 @@ h2.section-title {
 .site-header.is-scrolled .brand-lockup { color: var(--escuro); }
 .site-header .brand-tagline { color: var(--salvia); }
 .site-header.is-scrolled .brand-tagline { color: var(--claro); }
-.site-header .header-nav-link { color: var(--areia); }
-.site-header.is-scrolled .header-nav-link { color: var(--escuro); }
 
 /* páginas secundárias (sem hero escuro): header sempre sólido em Areia */
 body.page-solid-header .site-header {
@@ -410,7 +473,6 @@ body.page-solid-header .site-header {
 }
 body.page-solid-header .site-header .brand-lockup { color: var(--escuro); }
 body.page-solid-header .site-header .brand-tagline { color: var(--claro); }
-body.page-solid-header .site-header .header-nav-link { color: var(--escuro); }
 body.page-solid-header .site-header .btn-wa { background: var(--musgo); border-color: var(--musgo); color: var(--areia); }
 body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-header .btn-wa:focus-visible {
   background: var(--escuro); color: var(--areia);
@@ -551,7 +613,7 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   padding-block: var(--gap-section);
 }
 .imoveis__grid {
-  margin-top: 56px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
@@ -563,6 +625,52 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   .imoveis__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
 .imoveis__all { margin-top: 48px; display: flex; justify-content: center; }
+
+/* ---------- Abas de filtro (imóveis) ---------- */
+.filter-bar {
+  background: var(--papel);
+  padding-block: 40px;
+  border-bottom: 1px solid var(--salvia);
+}
+.filter-bar .filter-tabs { margin-top: 0; }
+.filter-tabs {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.filter-tab {
+  font-family: var(--font-inst);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--claro);
+  padding: 10px 16px;
+  border: 1px solid var(--salvia);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+}
+.filter-tab:hover, .filter-tab:focus-visible { border-color: var(--musgo); color: var(--musgo); }
+.filter-tab.is-active {
+  background: var(--musgo);
+  border-color: var(--musgo);
+  color: var(--areia);
+}
+.filter-empty {
+  margin-top: 40px;
+  padding: 32px;
+  background: var(--papel);
+  border: 1px solid var(--salvia);
+  max-width: 44ch;
+}
+.filter-empty[hidden] { display: none; }
+.filter-empty p {
+  font-family: var(--font-ed);
+  font-size: 1.05rem;
+  color: var(--escuro);
+  margin-bottom: 16px;
+}
 .btn-wa--outline-dark {
   background: transparent;
   border: 1px solid var(--musgo);
@@ -573,6 +681,7 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   color: var(--areia);
 }
 .property-card { background: var(--papel); display: flex; flex-direction: column; }
+.property-card[hidden] { display: none; }
 .property-card__media {
   aspect-ratio: 4 / 3;
   background: var(--salvia);
@@ -874,8 +983,9 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
 
 /* ---------- Página de imóveis: listagem alternada ---------- */
 .property-feature { padding-block: var(--gap-section); }
-.property-feature:nth-of-type(odd) { background: var(--papel); }
-.property-feature:nth-of-type(even) { background: var(--areia); }
+.property-feature[hidden] { display: none; }
+.property-feature--papel { background: var(--papel); }
+.property-feature--areia { background: var(--areia); }
 .feature-row { display: grid; gap: 40px; }
 .feature-row > * { min-width: 0; }
 @media (min-width: 900px) {
@@ -889,7 +999,7 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
-.feature-row__eyebrow { color: var(--latao); margin-bottom: 14px; display: block; }
+.feature-row__eyebrow { color: var(--claro); margin-bottom: 14px; display: block; }
 .feature-row__name {
   font-family: var(--font-inst);
   font-weight: 300;
@@ -920,6 +1030,6 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   background: var(--areia);
   border: 1px solid var(--salvia);
 }
-.property-feature:nth-of-type(even) .feature-row__specs li { background: var(--papel); }
+.property-feature--areia .feature-row__specs li { background: var(--papel); }
 .feature-row__cta { margin-top: 28px; }
 .feature-row__cta .btn-wa { white-space: normal; text-align: center; max-width: 100%; }
