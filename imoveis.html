@@ -175,6 +175,13 @@
 
 <header class="site-header" id="site-header">
   <div class="container">
+    <button class="btn-menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <line class="menu-line menu-line--top" x1="3" y1="7" x2="21" y2="7" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        <line class="menu-line menu-line--mid" x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+        <line class="menu-line menu-line--bottom" x1="3" y1="17" x2="21" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+      </svg>
+    </button>
     <a href="index.html#topo" class="brand-lockup" aria-label="Felipe Ramalho — página inicial">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 300 299.999988"><use href="#mark"></use></svg></span>
       <span class="brand-lockup__text">
@@ -182,19 +189,10 @@
         <span class="brand-tagline">Imóveis de alto padrão · Maringá</span>
       </span>
     </a>
-    <div class="header-actions">
-      <button class="btn-menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <line class="menu-line menu-line--top" x1="3" y1="7" x2="21" y2="7" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
-          <line class="menu-line menu-line--mid" x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
-          <line class="menu-line menu-line--bottom" x1="3" y1="17" x2="21" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
-        </svg>
-      </button>
-      <a class="btn-wa" href="https://wa.me/" data-wa data-wa-msg="Olá! Quero mais informações sobre um imóvel!">
-        <svg width="17" height="17" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-        Falar no WhatsApp
-      </a>
-    </div>
+    <a class="btn-wa" href="https://wa.me/" data-wa data-wa-msg="Olá! Quero mais informações sobre um imóvel!">
+      <svg width="17" height="17" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+      Falar no WhatsApp
+    </a>
   </div>
   <nav class="site-menu" id="site-menu" aria-label="Menu principal" hidden>
     <div class="container site-menu__inner">
