@@ -2,7 +2,7 @@
   "use strict";
 
   // Número de WhatsApp usado em todo botão "Falar no WhatsApp" do site.
-  var WHATSAPP_NUMBER = "5544988281680";
+  var WHATSAPP_NUMBER = "554488281680";
 
   // Conversão do Google Ads: dispara ao clicar em qualquer botão do WhatsApp.
   // Os links abrem em nova aba (target="_blank"), então só reportamos o evento
