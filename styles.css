@@ -768,30 +768,12 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
 @media (min-width: 900px) {
   .depoimentos__grid { grid-template-columns: repeat(2, 1fr); gap: 56px; }
 }
-.depoimento blockquote {
-  font-family: var(--font-ed);
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
-  line-height: 1.5;
-  color: var(--escuro);
-}
 .depoimento__print-eyebrow { color: var(--claro); margin-bottom: 16px; display: block; }
 .depoimento--print img {
   width: 100%;
   max-width: 280px;
   height: auto;
   border: 1px solid var(--salvia);
-}
-.depoimento cite {
-  display: block;
-  margin-top: 18px;
-  font-style: normal;
-  font-family: var(--font-inst);
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--claro);
 }
 
 /* ---------- Depoimento em vídeo (card dentro de .depoimentos__grid) ---------- */

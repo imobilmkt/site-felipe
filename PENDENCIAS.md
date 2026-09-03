@@ -39,10 +39,12 @@ Lagoon Home Club, Lithos, Office Cidade Aruna) já estão prontos, e eu adiciono
 uma mensagem convidando a pessoa a chamar no WhatsApp — não é um beco sem saída, mas
 também não é o ideal para sempre.
 
-## Instagram
+## Instagram — resolvido
 
-Usei o handle **@feliperamalho.imoveis** porque ele aparece no próprio manual de
-marca (prancha 07). Se a conta mudou, atualize o link no rodapé.
+O handle correto é **@ramalhofelipe1** (o manual de marca trazia
+@feliperamalho.imoveis, desatualizado). Corrigi nos três rodapés
+(`index.html`, `imoveis.html`, `trajetoria.html`), no `sameAs` do JSON-LD e no
+`llms.txt`.
 
 ## SEO e recomendação por IA (pedido via WhatsApp)
 
