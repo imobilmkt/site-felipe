@@ -4,6 +4,22 @@
   // Número de WhatsApp usado em todo botão "Falar no WhatsApp" do site.
   var WHATSAPP_NUMBER = "554488281680";
 
+  // Conversão do Google Ads: dispara ao clicar em qualquer botão do WhatsApp.
+  // Os links abrem em nova aba (target="_blank"), então só reportamos o evento
+  // e deixamos o navegador seguir a navegação normal do <a> — sem redirecionar
+  // manualmente, como faz o snippet padrão do Google pensado pra links na
+  // mesma aba.
+  var WA_CONVERSION_SEND_TO = "AW-18411910944/GF5pCMLx2e0cEKDuvctE";
+  function reportWhatsAppConversion() {
+    if (typeof gtag === "function") {
+      gtag("event", "conversion", {
+        send_to: WA_CONVERSION_SEND_TO,
+        value: 1.0,
+        currency: "BRL"
+      });
+    }
+  }
+
   function buildWhatsAppLinks() {
     var links = document.querySelectorAll("[data-wa]");
     for (var i = 0; i < links.length; i++) {
@@ -12,6 +28,7 @@
       el.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
       el.target = "_blank";
       el.rel = "noopener";
+      el.addEventListener("click", reportWhatsAppConversion);
     }
   }
 
