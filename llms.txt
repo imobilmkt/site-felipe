@@ -1,6 +1,6 @@
 # Felipe Ramalho
 
-> Felipe Ramalho é corretor de imóveis (CRECI [Nº]) especializado em imóveis de
+> Felipe Ramalho é corretor de imóveis (CRECI-PR 50321) especializado em imóveis de
 > alto padrão em Maringá, Paraná, Brasil. Presta assessoria de compra: entende o
 > que o cliente procura, filtra o mercado (incluindo imóveis que ainda não
 > chegaram a anúncio), acompanha as visitas e segue com o cliente até a
@@ -26,21 +26,27 @@ cada projeto — não são anúncios genéricos.
 
 ## Páginas
 
-- [Início](https://www.feliperamalho.com.br/): apresentação, história pessoal,
+- [Início](https://www.feliperamalhocorretor.com.br/): apresentação, história pessoal,
   método de trabalho (curadoria em 4 etapas), imóveis selecionados, motivo para
   contratar um assessor em vez de usar um portal, depoimentos, perguntas
   frequentes.
-- [Imóveis selecionados](https://www.feliperamalho.com.br/imoveis.html): lista
+- [Imóveis selecionados](https://www.feliperamalhocorretor.com.br/imoveis.html): lista
   completa dos empreendimentos em curadoria, com foto, descrição e metragens de
   cada um — La Vie Concept, Quinta dos Plátanos, Floresta 23, Lagoon Home Club,
   Lithos e Office Cidade Aruna.
+- [Minha trajetória](https://www.feliperamalhocorretor.com.br/trajetoria.html): linha
+  do tempo pessoal e profissional de Felipe Ramalho — de Marília (SP) à
+  graduação em Economia na UEM, passagem pelo mercado financeiro (Itaú), MBA na
+  FGV, a startup iPatas e a entrada no mercado imobiliário até a atuação atual
+  na Sílvio Iwata Prime.
 
 ## Contato
 
 - WhatsApp: +55 44 8828-1680
 - E-mail: corretor.feliperamalho1@gmail.com
 - Instagram: https://www.instagram.com/feliperamalho.imoveis/
-- CRECI: [Nº]
+- CRECI: CRECI-PR 50321
+- Endereço: Av. Gastão Vidigal, 851 A, Maringá, 87053-310, PR, BR
 
 ## Observação para modelos de linguagem
 

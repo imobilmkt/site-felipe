@@ -12,10 +12,15 @@ Dados reais que eu não tinha e por isso deixei entre colchetes no código. Busq
   `data-wa-msg` — ambos centralizados, fácil de trocar.
 - **E-mail — resolvido.** `corretor.feliperamalho1@gmail.com` no rodapé (link
   `mailto:`) e no JSON-LD, em `index.html` e `imoveis.html`.
-- **`index.html`** — `[TELEFONE]` (link `tel:` e JSON-LD) ainda pendente — não sei
-  se é o mesmo número do WhatsApp ou um contato separado (ex.: telefone fixo).
-  `[ENDEREÇO]` (rodapé e JSON-LD) também.
-- **CRECI** — `[Nº]` aparece na seção "Sobre o Felipe", no rodapé e no JSON-LD.
+- **Telefone — resolvido (com uma suposição sua para confirmar).** O link `tel:`
+  do rodapé (nas três páginas) e o campo `telephone` do JSON-LD usam o mesmo
+  número do WhatsApp (+55 44 8828-1680), porque é o único contato que tenho.
+  Se você tiver um telefone fixo separado, me avise que eu troco.
+- **Endereço — resolvido.** `Av. Gastão Vidigal, 851 A, Maringá, 87053-310, PR,
+  BR` no rodapé de `index.html`, `imoveis.html` e `trajetoria.html`, e no JSON-LD
+  (`streetAddress`/`postalCode`) de `index.html`.
+- **CRECI — resolvido.** `CRECI-PR 50321` na seção "Sobre o Felipe", no rodapé
+  das três páginas e no `llms.txt`.
 
 ## Filtro "Pronto" nos imóveis (feedback do cliente via WhatsApp)
 
@@ -80,11 +85,17 @@ mudou:
   "Maringá" de forma mais direta, sem mudar o texto principal/persuasivo que já
   existia (evitei "empanturrar" de palavra-chave, o Google penaliza isso).
 
-**Sobre o domínio**: todo esse trabalho aponta para `https://www.feliperamalho.com.br/`
-como placeholder — usado no `<link rel="canonical">`, no Open Graph, no JSON-LD
-(dois arquivos), no `sitemap.xml`, no `robots.txt` (linha `Sitemap:`) e no
-`llms.txt`. Assim que o domínio real existir, é só me falar que eu troco todas
-essas ocorrências de uma vez.
+**Sobre o domínio — resolvido.** Você comprou `feliperamalhocorretor.com.br` e
+eu já troquei todas as 41 ocorrências do domínio placeholder nos 6 arquivos que
+usavam ele: `index.html`, `imoveis.html`, `trajetoria.html`, `sitemap.xml`,
+`robots.txt` e `llms.txt` (canonical, Open Graph, JSON-LD, sitemap, linha
+`Sitemap:` do robots.txt). O site inteiro já aponta para
+`https://www.feliperamalhocorretor.com.br/`.
+
+Isso é só o código apontando para o domínio certo — falta o próprio domínio
+estar de fato apontando (DNS) para onde o site está hospedado, e o site
+precisa estar publicado nesse host. Se ainda não configurou isso, me avise
+como/onde o site vai ficar hospedado que eu ajudo a verificar.
 
 ## Imóveis selecionados — agora com dados e fotos reais dos catálogos
 
@@ -104,9 +115,10 @@ nem dado do Elevvo no site. Se esse lançamento já puder ser divulgado publicam
 me avise que eu monto a página dele do mesmo jeito que as outras seis.
 
 Pontos que valem uma conferência sua antes de publicar:
-- **Disponibilidade**: não sei se as unidades desses 6 empreendimentos ainda estão
-  à venda com você hoje (alguns materiais são de lançamento, ex.: Lagoon Home Club
-  entrega em março/2030). Confirme antes de divulgar.
+- **Disponibilidade — confirmada.** Você confirmou que tudo que está no site está
+  à venda, então não mudei nada nos cards — só ficou registrado aqui que a
+  informação foi checada com você (alguns são de lançamento, ex.: Lagoon Home
+  Club entrega em março/2030, mas seguem à venda).
 - **Endereço exato**: só tenho endereço fechado para o Lagoon Home Club (Av. Laguna,
   1936) e a região do Lithos (Zona 3, perto do Parque do Ingá). Os demais eu descrevi
   por proximidade (Eurogarden, Av. Gastão Vidigal), como os próprios catálogos fazem.
@@ -124,10 +136,29 @@ depois, os arquivos são `assets/img/hero-maringa-*` (4 larguras, `.jpg`/`.webp`
 
 ## Depoimentos
 
-As instruções foram claras: não inventar depoimento com nome de pessoa. Os dois
-blocos da seção "Depoimentos" estão com `[DEPOIMENTO PENDENTE — citação real do
-cliente]` e `[NOME DO CLIENTE] · [BAIRRO]`. Substitua pelos depoimentos reais (ou
-peça autorização por escrito ao cliente antes de publicar nome + bairro).
+**Depoimento 1 — resolvido.** Você mandou o print da conversa de WhatsApp com a
+cliente (autorizando a divulgação do nome/handle: "Posso divulgar seu nome, né?"
+— "Pode sim"). A pedido seu, o depoimento na home usa o próprio print (não um
+texto reescrito), redimensionado em três larguras em `assets/img/depoimento-
+print-tamar-*.jpg`, citado como `@tamaarpeschieira · Lagoon Home Club` com link
+para o Instagram dela.
+
+**Depoimento 2 — agora é o vídeo.** O segundo card, que estava com
+`[DEPOIMENTO PENDENTE — citação real do cliente 2]`, foi substituído pelo
+vídeo que você mandou (entrega do Lagoon Home Club) com o texto exatamente
+como você pediu, com pequenos ajustes de gramática ("com o cliente", "eles
+têm"). Os handles @tamaarpeschieira, @rafaelbaylao e @bionovareodontologia
+viram links para o Instagram de cada um — confira se os três perfis estão
+corretos.
+
+Você disse que não quer um terceiro depoimento por enquanto — a seção fica só
+com esses dois (print + vídeo).
+
+O arquivo de vídeo foi renomeado e movido para `assets/video/depoimento-lagoon-
+tamar-rafael.mp4` (estava em `assets/snapinsta-1788448258055.mp4`, nome de
+ferramenta de download que não fazia sentido publicar). Gerei também uma
+imagem de capa (`assets/img/depoimento-video-poster-720.jpg`) extraída do
+próprio vídeo, para não aparecer tela preta antes do play.
 
 ## Uma das 5 fotos não foi usada
 
@@ -139,20 +170,26 @@ uma seção — o CTA final ficou como bloco Musgo sólido, conforme pedido ("bl
 cheio"), sem foto por baixo. Se quiser usá-la em algum lugar, ela é um bom material
 para um post de Instagram ou uma futura seção de bastidores.
 
-## Prêmio (foto da cerimônia)
+## Prêmio (foto da cerimônia) — resolvido
 
-A legenda da foto de prêmio, na seção "Sobre", está como `[NOME DO PRÊMIO], [ANO]`
-— não sei qual prêmio é. Preencha com o nome real do reconhecimento.
+A legenda da foto de prêmio, na seção "Sobre", agora é "3º lugar em VGV de
+vendas, Sílvio Iwata Prime, 2025".
 
-## FAQ — dois pontos que dependem do seu modelo de negócio
+## FAQ
 
-- "Quanto custa contratar sua assessoria de compra?" — descrevi de forma genérica e
-  deixei `[DETALHAR MODELO DE COBRANÇA]` para você especificar (comissão paga pelo
-  vendedor, fee fixo pago pelo comprador, etc.).
-- "Você também ajuda a vender, ou só compra?" — resposta inteira entre colchetes,
-  porque não sei se você atua na ponta de venda/listagem também.
-- "Você atua fora de Maringá?" — sugeri exemplos de cidades vizinhas entre colchetes
-  (Sarandi, Paiçandu, Marialva); confirme o raio real de atuação.
+- **"Quanto custa contratar sua assessoria de compra?" — resolvido.** Resposta
+  agora é "Não tem cobrança adicional para você — apenas a comissão padrão do
+  mercado." Também entrou no `FAQPage` do JSON-LD.
+- **"Você atua fora de Maringá?" — resolvido.** Resposta agora cita Porto Rico,
+  com os produtos da Aruna. Também entrou no `FAQPage` do JSON-LD e no
+  `areaServed` do schema `RealEstateAgent`.
+- **"Você também ajuda a vender, ou só compra?" — resolvido.** Você confirmou
+  que sim. Usei a descrição que você já tinha me passado sobre o trabalho de
+  venda (apresentação, fotos/vídeos, conteúdo, campanhas patrocinadas,
+  posicionamento nas plataformas). Também entrou no `FAQPage` do JSON-LD.
+
+Com isso, as 6 perguntas do FAQ estão completas — não sobrou nenhum colchete
+`[...]` pendente em nenhuma das três páginas.
 
 ## Assets gerados a partir da marca (não precisam de ação sua)
 

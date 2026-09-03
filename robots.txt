@@ -42,4 +42,4 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://www.feliperamalho.com.br/sitemap.xml
+Sitemap: https://www.feliperamalhocorretor.com.br/sitemap.xml
