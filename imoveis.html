@@ -355,15 +355,40 @@
   <section class="property-feature property-feature--papel reveal" aria-labelledby="lavie-title" data-category="studio">
     <div class="container">
       <div class="feature-row">
-        <figure class="feature-row__media">
-          <picture>
-            <source type="image/avif" srcset="assets/img/prop-lavie-480.avif 480w, assets/img/prop-lavie-800.avif 800w, assets/img/prop-lavie-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
-            <source type="image/webp" srcset="assets/img/prop-lavie-480.webp 480w, assets/img/prop-lavie-800.webp 800w, assets/img/prop-lavie-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
-            <img src="assets/img/prop-lavie-800.jpg" srcset="assets/img/prop-lavie-480.jpg 480w, assets/img/prop-lavie-800.jpg 800w, assets/img/prop-lavie-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="1414" loading="lazy" decoding="async" alt="Fachada iluminada do La Vie Concept ao entardecer, com jardim de flores roxas na entrada.">
-          </picture>
+        <figure class="feature-row__media property-gallery" data-gallery>
+          <div class="property-gallery__viewport">
+            <div class="property-gallery__slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lavie-480.avif 480w, assets/img/prop-lavie-800.avif 800w, assets/img/prop-lavie-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lavie-480.webp 480w, assets/img/prop-lavie-800.webp 800w, assets/img/prop-lavie-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lavie-800.jpg" srcset="assets/img/prop-lavie-480.jpg 480w, assets/img/prop-lavie-800.jpg 800w, assets/img/prop-lavie-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="1414" loading="lazy" decoding="async" alt="Fachada iluminada do La Vie Concept ao entardecer, com jardim de flores roxas na entrada.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lavie-2-480.avif 480w, assets/img/prop-lavie-2-800.avif 800w, assets/img/prop-lavie-2-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lavie-2-480.webp 480w, assets/img/prop-lavie-2-800.webp 800w, assets/img/prop-lavie-2-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lavie-2-800.jpg" srcset="assets/img/prop-lavie-2-480.jpg 480w, assets/img/prop-lavie-2-800.jpg 800w, assets/img/prop-lavie-2-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="529" loading="lazy" decoding="async" alt="Piscina coberta aquecida do La Vie Concept, com deck de pedra e área de estar.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lavie-3-480.avif 480w, assets/img/prop-lavie-3-800.avif 800w, assets/img/prop-lavie-3-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lavie-3-480.webp 480w, assets/img/prop-lavie-3-800.webp 800w, assets/img/prop-lavie-3-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lavie-3-800.jpg" srcset="assets/img/prop-lavie-3-480.jpg 480w, assets/img/prop-lavie-3-800.jpg 800w, assets/img/prop-lavie-3-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="529" loading="lazy" decoding="async" alt="Quadra de padel do La Vie Concept, entre a torre e os muros verdes.">
+              </picture>
+            </div>
+          </div>
           <div class="property-tags">
             <span class="tag tag--lancamento">Lançamento</span>
             <span class="tag tag--tipo">Studio</span>
+          </div>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+          <div class="property-gallery__dots">
+            <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+            <button type="button" aria-label="Foto 2 de 3"></button>
+            <button type="button" aria-label="Foto 3 de 3"></button>
           </div>
         </figure>
         <div class="feature-row__body">
@@ -391,16 +416,41 @@
   <section class="property-feature property-feature--areia reveal" aria-labelledby="quinta-title" data-category="condominio alto">
     <div class="container">
       <div class="feature-row feature-row--reverse">
-        <figure class="feature-row__media">
-          <picture>
-            <source type="image/avif" srcset="assets/img/prop-quintaplatanos-480.avif 480w, assets/img/prop-quintaplatanos-800.avif 800w, assets/img/prop-quintaplatanos-1200.avif 1200w, assets/img/prop-quintaplatanos-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
-            <source type="image/webp" srcset="assets/img/prop-quintaplatanos-480.webp 480w, assets/img/prop-quintaplatanos-800.webp 800w, assets/img/prop-quintaplatanos-1200.webp 1200w, assets/img/prop-quintaplatanos-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
-            <img src="assets/img/prop-quintaplatanos-800.jpg" srcset="assets/img/prop-quintaplatanos-480.jpg 480w, assets/img/prop-quintaplatanos-800.jpg 800w, assets/img/prop-quintaplatanos-1200.jpg 1200w, assets/img/prop-quintaplatanos-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="941" loading="lazy" decoding="async" alt="Portaria do condomínio Quinta dos Plátanos, com acesso em concreto, piso em bloquete vermelho e paisagismo.">
-          </picture>
+        <figure class="feature-row__media property-gallery" data-gallery>
+          <div class="property-gallery__viewport">
+            <div class="property-gallery__slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-quintaplatanos-480.avif 480w, assets/img/prop-quintaplatanos-800.avif 800w, assets/img/prop-quintaplatanos-1200.avif 1200w, assets/img/prop-quintaplatanos-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-quintaplatanos-480.webp 480w, assets/img/prop-quintaplatanos-800.webp 800w, assets/img/prop-quintaplatanos-1200.webp 1200w, assets/img/prop-quintaplatanos-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-quintaplatanos-800.jpg" srcset="assets/img/prop-quintaplatanos-480.jpg 480w, assets/img/prop-quintaplatanos-800.jpg 800w, assets/img/prop-quintaplatanos-1200.jpg 1200w, assets/img/prop-quintaplatanos-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="941" loading="lazy" decoding="async" alt="Portaria do condomínio Quinta dos Plátanos, com acesso em concreto, piso em bloquete vermelho e paisagismo.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-quintaplatanos-2-480.avif 480w, assets/img/prop-quintaplatanos-2-800.avif 800w, assets/img/prop-quintaplatanos-2-1200.avif 1200w, assets/img/prop-quintaplatanos-2-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-quintaplatanos-2-480.webp 480w, assets/img/prop-quintaplatanos-2-800.webp 800w, assets/img/prop-quintaplatanos-2-1200.webp 1200w, assets/img/prop-quintaplatanos-2-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-quintaplatanos-2-800.jpg" srcset="assets/img/prop-quintaplatanos-2-480.jpg 480w, assets/img/prop-quintaplatanos-2-800.jpg 800w, assets/img/prop-quintaplatanos-2-1200.jpg 1200w, assets/img/prop-quintaplatanos-2-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="840" loading="lazy" decoding="async" alt="Piscina de borda infinita do clube da Quinta dos Plátanos, com deck e palmeiras.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-quintaplatanos-3-480.avif 480w, assets/img/prop-quintaplatanos-3-800.avif 800w, assets/img/prop-quintaplatanos-3-1200.avif 1200w, assets/img/prop-quintaplatanos-3-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-quintaplatanos-3-480.webp 480w, assets/img/prop-quintaplatanos-3-800.webp 800w, assets/img/prop-quintaplatanos-3-1200.webp 1200w, assets/img/prop-quintaplatanos-3-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-quintaplatanos-3-800.jpg" srcset="assets/img/prop-quintaplatanos-3-480.jpg 480w, assets/img/prop-quintaplatanos-3-800.jpg 800w, assets/img/prop-quintaplatanos-3-1200.jpg 1200w, assets/img/prop-quintaplatanos-3-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="844" loading="lazy" decoding="async" alt="Espaço gourmet do clube da Quinta dos Plátanos, com vista para a piscina e o jardim.">
+              </picture>
+            </div>
+          </div>
           <div class="property-tags">
             <span class="tag tag--lancamento">Lançamento</span>
             <span class="tag tag--tipo">Condomínio fechado</span>
             <span class="tag tag--metragem">100 m²+</span>
+          </div>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+          <div class="property-gallery__dots">
+            <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+            <button type="button" aria-label="Foto 2 de 3"></button>
+            <button type="button" aria-label="Foto 3 de 3"></button>
           </div>
         </figure>
         <div class="feature-row__body">
@@ -428,16 +478,41 @@
   <section class="property-feature property-feature--papel reveal" aria-labelledby="floresta-title" data-category="condominio alto">
     <div class="container">
       <div class="feature-row">
-        <figure class="feature-row__media">
-          <picture>
-            <source type="image/avif" srcset="assets/img/prop-floresta23-480.avif 480w, assets/img/prop-floresta23-800.avif 800w, assets/img/prop-floresta23-1200.avif 1200w, assets/img/prop-floresta23-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
-            <source type="image/webp" srcset="assets/img/prop-floresta23-480.webp 480w, assets/img/prop-floresta23-800.webp 800w, assets/img/prop-floresta23-1200.webp 1200w, assets/img/prop-floresta23-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
-            <img src="assets/img/prop-floresta23-800.jpg" srcset="assets/img/prop-floresta23-480.jpg 480w, assets/img/prop-floresta23-800.jpg 800w, assets/img/prop-floresta23-1200.jpg 1200w, assets/img/prop-floresta23-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="900" loading="lazy" decoding="async" alt="Portal de entrada do loteamento Floresta 23 ao entardecer, com palmeiras e iluminação em concreto e pedra.">
-          </picture>
+        <figure class="feature-row__media property-gallery" data-gallery>
+          <div class="property-gallery__viewport">
+            <div class="property-gallery__slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-floresta23-480.avif 480w, assets/img/prop-floresta23-800.avif 800w, assets/img/prop-floresta23-1200.avif 1200w, assets/img/prop-floresta23-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-floresta23-480.webp 480w, assets/img/prop-floresta23-800.webp 800w, assets/img/prop-floresta23-1200.webp 1200w, assets/img/prop-floresta23-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-floresta23-800.jpg" srcset="assets/img/prop-floresta23-480.jpg 480w, assets/img/prop-floresta23-800.jpg 800w, assets/img/prop-floresta23-1200.jpg 1200w, assets/img/prop-floresta23-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="900" loading="lazy" decoding="async" alt="Portal de entrada do loteamento Floresta 23 ao entardecer, com palmeiras e iluminação em concreto e pedra.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-floresta23-2-480.avif 480w, assets/img/prop-floresta23-2-800.avif 800w, assets/img/prop-floresta23-2-1200.avif 1200w, assets/img/prop-floresta23-2-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-floresta23-2-480.webp 480w, assets/img/prop-floresta23-2-800.webp 800w, assets/img/prop-floresta23-2-1200.webp 1200w, assets/img/prop-floresta23-2-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-floresta23-2-800.jpg" srcset="assets/img/prop-floresta23-2-480.jpg 480w, assets/img/prop-floresta23-2-800.jpg 800w, assets/img/prop-floresta23-2-1200.jpg 1200w, assets/img/prop-floresta23-2-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="811" loading="lazy" decoding="async" alt="Vista aérea do clube do Floresta 23 ao entardecer, com quadras esportivas e paisagismo.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-floresta23-3-480.avif 480w, assets/img/prop-floresta23-3-800.avif 800w, assets/img/prop-floresta23-3-1200.avif 1200w, assets/img/prop-floresta23-3-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-floresta23-3-480.webp 480w, assets/img/prop-floresta23-3-800.webp 800w, assets/img/prop-floresta23-3-1200.webp 1200w, assets/img/prop-floresta23-3-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-floresta23-3-800.jpg" srcset="assets/img/prop-floresta23-3-480.jpg 480w, assets/img/prop-floresta23-3-800.jpg 800w, assets/img/prop-floresta23-3-1200.jpg 1200w, assets/img/prop-floresta23-3-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="811" loading="lazy" decoding="async" alt="Hall social do clube do Floresta 23, com jardim interno e pé-direito duplo.">
+              </picture>
+            </div>
+          </div>
           <div class="property-tags">
             <span class="tag tag--lancamento">Lançamento</span>
             <span class="tag tag--tipo">Condomínio fechado</span>
             <span class="tag tag--metragem">100 m²+</span>
+          </div>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+          <div class="property-gallery__dots">
+            <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+            <button type="button" aria-label="Foto 2 de 3"></button>
+            <button type="button" aria-label="Foto 3 de 3"></button>
           </div>
         </figure>
         <div class="feature-row__body">
@@ -465,15 +540,40 @@
   <section class="property-feature property-feature--areia reveal" aria-labelledby="lagoon-title" data-category="studio">
     <div class="container">
       <div class="feature-row feature-row--reverse">
-        <figure class="feature-row__media">
-          <picture>
-            <source type="image/avif" srcset="assets/img/prop-lagoon-480.avif 480w, assets/img/prop-lagoon-800.avif 800w, assets/img/prop-lagoon-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
-            <source type="image/webp" srcset="assets/img/prop-lagoon-480.webp 480w, assets/img/prop-lagoon-800.webp 800w, assets/img/prop-lagoon-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
-            <img src="assets/img/prop-lagoon-800.jpg" srcset="assets/img/prop-lagoon-480.jpg 480w, assets/img/prop-lagoon-800.jpg 800w, assets/img/prop-lagoon-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="1500" loading="lazy" decoding="async" alt="Torre do Lagoon Home Club vista entre árvores, na Av. Laguna, em Maringá.">
-          </picture>
+        <figure class="feature-row__media property-gallery" data-gallery>
+          <div class="property-gallery__viewport">
+            <div class="property-gallery__slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lagoon-480.avif 480w, assets/img/prop-lagoon-800.avif 800w, assets/img/prop-lagoon-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lagoon-480.webp 480w, assets/img/prop-lagoon-800.webp 800w, assets/img/prop-lagoon-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lagoon-800.jpg" srcset="assets/img/prop-lagoon-480.jpg 480w, assets/img/prop-lagoon-800.jpg 800w, assets/img/prop-lagoon-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="1500" loading="lazy" decoding="async" alt="Torre do Lagoon Home Club vista entre árvores, na Av. Laguna, em Maringá.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lagoon-2-480.avif 480w, assets/img/prop-lagoon-2-800.avif 800w, assets/img/prop-lagoon-2-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lagoon-2-480.webp 480w, assets/img/prop-lagoon-2-800.webp 800w, assets/img/prop-lagoon-2-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lagoon-2-800.jpg" srcset="assets/img/prop-lagoon-2-480.jpg 480w, assets/img/prop-lagoon-2-800.jpg 800w, assets/img/prop-lagoon-2-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="622" loading="lazy" decoding="async" alt="Piscina do gourmet do Lagoon Home Club, vista de cima, com deck e sala de jantar integrada.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lagoon-3-480.avif 480w, assets/img/prop-lagoon-3-800.avif 800w, assets/img/prop-lagoon-3-1200.avif 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lagoon-3-480.webp 480w, assets/img/prop-lagoon-3-800.webp 800w, assets/img/prop-lagoon-3-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lagoon-3-800.jpg" srcset="assets/img/prop-lagoon-3-480.jpg 480w, assets/img/prop-lagoon-3-800.jpg 800w, assets/img/prop-lagoon-3-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 90vw" width="1200" height="622" loading="lazy" decoding="async" alt="Academia do Lagoon Home Club, com equipamentos de musculação e vista para o jardim.">
+              </picture>
+            </div>
+          </div>
           <div class="property-tags">
             <span class="tag tag--lancamento">Lançamento</span>
             <span class="tag tag--tipo">Studio</span>
+          </div>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+          <div class="property-gallery__dots">
+            <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+            <button type="button" aria-label="Foto 2 de 3"></button>
+            <button type="button" aria-label="Foto 3 de 3"></button>
           </div>
         </figure>
         <div class="feature-row__body">
@@ -501,16 +601,41 @@
   <section class="property-feature property-feature--papel reveal" aria-labelledby="lithos-title" data-category="alto">
     <div class="container">
       <div class="feature-row">
-        <figure class="feature-row__media">
-          <picture>
-            <source type="image/avif" srcset="assets/img/prop-lithos-480.avif 480w, assets/img/prop-lithos-800.avif 800w" sizes="(min-width: 900px) 46vw, 90vw">
-            <source type="image/webp" srcset="assets/img/prop-lithos-480.webp 480w, assets/img/prop-lithos-800.webp 800w" sizes="(min-width: 900px) 46vw, 90vw">
-            <img src="assets/img/prop-lithos-800.jpg" srcset="assets/img/prop-lithos-480.jpg 480w, assets/img/prop-lithos-800.jpg 800w" sizes="(min-width: 900px) 46vw, 90vw" width="800" height="881" loading="lazy" decoding="async" alt="Torre do Lithos ao entardecer, com céu em tons de rosa e lilás.">
-          </picture>
+        <figure class="feature-row__media property-gallery" data-gallery>
+          <div class="property-gallery__viewport">
+            <div class="property-gallery__slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lithos-480.avif 480w, assets/img/prop-lithos-800.avif 800w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lithos-480.webp 480w, assets/img/prop-lithos-800.webp 800w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lithos-800.jpg" srcset="assets/img/prop-lithos-480.jpg 480w, assets/img/prop-lithos-800.jpg 800w" sizes="(min-width: 900px) 46vw, 90vw" width="800" height="881" loading="lazy" decoding="async" alt="Torre do Lithos ao entardecer, com céu em tons de rosa e lilás.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lithos-2-480.avif 480w, assets/img/prop-lithos-2-800.avif 800w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lithos-2-480.webp 480w, assets/img/prop-lithos-2-800.webp 800w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lithos-2-800.jpg" srcset="assets/img/prop-lithos-2-480.jpg 480w, assets/img/prop-lithos-2-800.jpg 800w" sizes="(min-width: 900px) 46vw, 90vw" width="800" height="364" loading="lazy" decoding="async" alt="Piscina privativa gourmet do Lithos, no rooftop, com deck de madeira e espreguiçadeiras.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-lithos-3-480.avif 480w, assets/img/prop-lithos-3-800.avif 800w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-lithos-3-480.webp 480w, assets/img/prop-lithos-3-800.webp 800w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-lithos-3-800.jpg" srcset="assets/img/prop-lithos-3-480.jpg 480w, assets/img/prop-lithos-3-800.jpg 800w" sizes="(min-width: 900px) 46vw, 90vw" width="800" height="364" loading="lazy" decoding="async" alt="Academia do Lithos, com equipamentos de musculação e vista para a cidade.">
+              </picture>
+            </div>
+          </div>
           <div class="property-tags">
             <span class="tag tag--lancamento">Lançamento</span>
             <span class="tag tag--tipo">Alto padrão</span>
             <span class="tag tag--metragem">100 m²+</span>
+          </div>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+          <div class="property-gallery__dots">
+            <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+            <button type="button" aria-label="Foto 2 de 3"></button>
+            <button type="button" aria-label="Foto 3 de 3"></button>
           </div>
         </figure>
         <div class="feature-row__body">
@@ -538,15 +663,40 @@
   <section class="property-feature property-feature--areia reveal" aria-labelledby="office-title" data-category="comercial">
     <div class="container">
       <div class="feature-row feature-row--reverse">
-        <figure class="feature-row__media">
-          <picture>
-            <source type="image/avif" srcset="assets/img/prop-cidadearuna-480.avif 480w, assets/img/prop-cidadearuna-800.avif 800w, assets/img/prop-cidadearuna-1200.avif 1200w, assets/img/prop-cidadearuna-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
-            <source type="image/webp" srcset="assets/img/prop-cidadearuna-480.webp 480w, assets/img/prop-cidadearuna-800.webp 800w, assets/img/prop-cidadearuna-1200.webp 1200w, assets/img/prop-cidadearuna-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
-            <img src="assets/img/prop-cidadearuna-800.jpg" srcset="assets/img/prop-cidadearuna-480.jpg 480w, assets/img/prop-cidadearuna-800.jpg 800w, assets/img/prop-cidadearuna-1200.jpg 1200w, assets/img/prop-cidadearuna-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="900" loading="lazy" decoding="async" alt="Vista aérea ao entardecer do complexo Cidade Aruna, com as torres do Office em primeiro plano.">
-          </picture>
+        <figure class="feature-row__media property-gallery" data-gallery>
+          <div class="property-gallery__viewport">
+            <div class="property-gallery__slide is-active">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-cidadearuna-480.avif 480w, assets/img/prop-cidadearuna-800.avif 800w, assets/img/prop-cidadearuna-1200.avif 1200w, assets/img/prop-cidadearuna-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-cidadearuna-480.webp 480w, assets/img/prop-cidadearuna-800.webp 800w, assets/img/prop-cidadearuna-1200.webp 1200w, assets/img/prop-cidadearuna-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-cidadearuna-800.jpg" srcset="assets/img/prop-cidadearuna-480.jpg 480w, assets/img/prop-cidadearuna-800.jpg 800w, assets/img/prop-cidadearuna-1200.jpg 1200w, assets/img/prop-cidadearuna-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="900" loading="lazy" decoding="async" alt="Vista aérea ao entardecer do complexo Cidade Aruna, com as torres do Office em primeiro plano.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-cidadearuna-2-480.avif 480w, assets/img/prop-cidadearuna-2-800.avif 800w, assets/img/prop-cidadearuna-2-1200.avif 1200w, assets/img/prop-cidadearuna-2-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-cidadearuna-2-480.webp 480w, assets/img/prop-cidadearuna-2-800.webp 800w, assets/img/prop-cidadearuna-2-1200.webp 1200w, assets/img/prop-cidadearuna-2-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-cidadearuna-2-800.jpg" srcset="assets/img/prop-cidadearuna-2-480.jpg 480w, assets/img/prop-cidadearuna-2-800.jpg 800w, assets/img/prop-cidadearuna-2-1200.jpg 1200w, assets/img/prop-cidadearuna-2-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="769" loading="lazy" decoding="async" alt="Lobby do Office Cidade Aruna, com pé-direito duplo e recepção em madeira.">
+              </picture>
+            </div>
+            <div class="property-gallery__slide">
+              <picture>
+                <source type="image/avif" srcset="assets/img/prop-cidadearuna-3-480.avif 480w, assets/img/prop-cidadearuna-3-800.avif 800w, assets/img/prop-cidadearuna-3-1200.avif 1200w, assets/img/prop-cidadearuna-3-1600.avif 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <source type="image/webp" srcset="assets/img/prop-cidadearuna-3-480.webp 480w, assets/img/prop-cidadearuna-3-800.webp 800w, assets/img/prop-cidadearuna-3-1200.webp 1200w, assets/img/prop-cidadearuna-3-1600.webp 1600w" sizes="(min-width: 900px) 46vw, 90vw">
+                <img src="assets/img/prop-cidadearuna-3-800.jpg" srcset="assets/img/prop-cidadearuna-3-480.jpg 480w, assets/img/prop-cidadearuna-3-800.jpg 800w, assets/img/prop-cidadearuna-3-1200.jpg 1200w, assets/img/prop-cidadearuna-3-1600.jpg 1600w" sizes="(min-width: 900px) 46vw, 90vw" width="1600" height="769" loading="lazy" decoding="async" alt="Rooftop do Office Cidade Aruna, com bar e vista para a cidade ao entardecer.">
+              </picture>
+            </div>
+          </div>
           <div class="property-tags">
             <span class="tag tag--lancamento">Lançamento</span>
             <span class="tag tag--tipo">Comercial</span>
+          </div>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+          <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+          <div class="property-gallery__dots">
+            <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+            <button type="button" aria-label="Foto 2 de 3"></button>
+            <button type="button" aria-label="Foto 3 de 3"></button>
           </div>
         </figure>
         <div class="feature-row__body">

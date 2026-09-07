@@ -144,6 +144,43 @@
     });
   }
 
+  function setupPropertyGalleries() {
+    var galleries = document.querySelectorAll("[data-gallery]");
+    galleries.forEach(function (gallery) {
+      var slides = gallery.querySelectorAll(".property-gallery__slide");
+      if (slides.length < 2) return;
+      var dots = gallery.querySelectorAll(".property-gallery__dots button");
+      var prevBtn = gallery.querySelector(".property-gallery__arrow--prev");
+      var nextBtn = gallery.querySelector(".property-gallery__arrow--next");
+      var viewport = gallery.querySelector(".property-gallery__viewport");
+      var index = 0;
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        slides.forEach(function (s, si) { s.classList.toggle("is-active", si === index); });
+        dots.forEach(function (d, di) { d.classList.toggle("is-active", di === index); });
+      }
+      if (prevBtn) prevBtn.addEventListener("click", function () { goTo(index - 1); });
+      if (nextBtn) nextBtn.addEventListener("click", function () { goTo(index + 1); });
+      dots.forEach(function (d, di) {
+        d.addEventListener("click", function () { goTo(di); });
+      });
+
+      var startX = null;
+      if (viewport) {
+        viewport.addEventListener("touchstart", function (e) {
+          startX = e.touches[0].clientX;
+        }, { passive: true });
+        viewport.addEventListener("touchend", function (e) {
+          if (startX === null) return;
+          var dx = e.changedTouches[0].clientX - startX;
+          if (Math.abs(dx) > 40) goTo(index + (dx < 0 ? 1 : -1));
+          startX = null;
+        });
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     buildWhatsAppLinks();
     setupHeaderScroll();
@@ -151,5 +188,6 @@
     setupYear();
     setupMenu();
     setupFilters();
+    setupPropertyGalleries();
   });
 })();
