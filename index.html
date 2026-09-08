@@ -352,16 +352,41 @@
       <div class="imoveis__grid">
 
         <article class="property-card" data-category="alto">
-          <div class="property-card__media">
-            <picture>
-              <source type="image/avif" srcset="assets/img/prop-lithos-480.avif 480w, assets/img/prop-lithos-800.avif 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
-              <source type="image/webp" srcset="assets/img/prop-lithos-480.webp 480w, assets/img/prop-lithos-800.webp 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
-              <img src="assets/img/prop-lithos-800.jpg" srcset="assets/img/prop-lithos-480.jpg 480w, assets/img/prop-lithos-800.jpg 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="800" height="881" loading="lazy" decoding="async" alt="Torre do Lithos ao entardecer, com céu rosa e lilás ao fundo.">
-            </picture>
+          <div class="property-card__media property-gallery" data-gallery>
+            <div class="property-gallery__viewport">
+              <div class="property-gallery__slide is-active">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/prop-lithos-480.avif 480w, assets/img/prop-lithos-800.avif 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <source type="image/webp" srcset="assets/img/prop-lithos-480.webp 480w, assets/img/prop-lithos-800.webp 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <img src="assets/img/prop-lithos-800.jpg" srcset="assets/img/prop-lithos-480.jpg 480w, assets/img/prop-lithos-800.jpg 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="800" height="881" loading="lazy" decoding="async" alt="Torre do Lithos ao entardecer, com céu rosa e lilás ao fundo.">
+                </picture>
+              </div>
+              <div class="property-gallery__slide">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/prop-lithos-2-480.avif 480w, assets/img/prop-lithos-2-800.avif 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <source type="image/webp" srcset="assets/img/prop-lithos-2-480.webp 480w, assets/img/prop-lithos-2-800.webp 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <img src="assets/img/prop-lithos-2-800.jpg" srcset="assets/img/prop-lithos-2-480.jpg 480w, assets/img/prop-lithos-2-800.jpg 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="800" height="364" loading="lazy" decoding="async" alt="Piscina privativa gourmet do Lithos, no rooftop, com deck de madeira e espreguiçadeiras.">
+                </picture>
+              </div>
+              <div class="property-gallery__slide">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/prop-lithos-3-480.avif 480w, assets/img/prop-lithos-3-800.avif 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <source type="image/webp" srcset="assets/img/prop-lithos-3-480.webp 480w, assets/img/prop-lithos-3-800.webp 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <img src="assets/img/prop-lithos-3-800.jpg" srcset="assets/img/prop-lithos-3-480.jpg 480w, assets/img/prop-lithos-3-800.jpg 800w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="800" height="364" loading="lazy" decoding="async" alt="Academia do Lithos, com equipamentos de musculação e vista para a cidade.">
+                </picture>
+              </div>
+            </div>
             <div class="property-tags">
               <span class="tag tag--lancamento">Lançamento</span>
               <span class="tag tag--tipo">Alto padrão</span>
               <span class="tag tag--metragem">100 m²+</span>
+            </div>
+            <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+            <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+            <div class="property-gallery__dots">
+              <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+              <button type="button" aria-label="Foto 2 de 3"></button>
+              <button type="button" aria-label="Foto 3 de 3"></button>
             </div>
           </div>
           <div class="property-card__body">
@@ -371,6 +396,10 @@
               <li>3 suítes</li>
               <li>Construtora Plaenge</li>
             </ul>
+            <a class="property-card__more" href="imoveis.html#lithos-title">
+              Ver mais informações do imóvel
+              <svg width="12" height="12" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </a>
             <a class="property-card__cta" href="https://wa.me/" data-wa data-wa-msg="Olá! Quero mais informações sobre um imóvel!">
               Perguntar sobre este imóvel
               <svg width="14" height="14" aria-hidden="true"><use href="#icon-arrow"></use></svg>
@@ -394,6 +423,10 @@
               <li>3 suítes + sala de TV</li>
               <li>Pronto · esquina Av. XV de Novembro</li>
             </ul>
+            <a class="property-card__more" href="imoveis.html#pablopicasso-title">
+              Ver mais informações do imóvel
+              <svg width="12" height="12" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </a>
             <a class="property-card__cta" href="https://wa.me/" data-wa data-wa-msg="Olá! Quero mais informações sobre o apartamento no Residencial Pablo Picasso!">
               Perguntar sobre este imóvel
               <svg width="14" height="14" aria-hidden="true"><use href="#icon-arrow"></use></svg>
@@ -402,15 +435,40 @@
         </article>
 
         <article class="property-card" data-category="studio">
-          <div class="property-card__media">
-            <picture>
-              <source type="image/avif" srcset="assets/img/prop-lagoon-480.avif 480w, assets/img/prop-lagoon-800.avif 800w, assets/img/prop-lagoon-1200.avif 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
-              <source type="image/webp" srcset="assets/img/prop-lagoon-480.webp 480w, assets/img/prop-lagoon-800.webp 800w, assets/img/prop-lagoon-1200.webp 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
-              <img src="assets/img/prop-lagoon-800.jpg" srcset="assets/img/prop-lagoon-480.jpg 480w, assets/img/prop-lagoon-800.jpg 800w, assets/img/prop-lagoon-1200.jpg 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="1200" height="1500" loading="lazy" decoding="async" alt="Torre do Lagoon Home Club vista entre árvores, na Av. Laguna." >
-            </picture>
+          <div class="property-card__media property-gallery" data-gallery>
+            <div class="property-gallery__viewport">
+              <div class="property-gallery__slide is-active">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/prop-lagoon-480.avif 480w, assets/img/prop-lagoon-800.avif 800w, assets/img/prop-lagoon-1200.avif 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <source type="image/webp" srcset="assets/img/prop-lagoon-480.webp 480w, assets/img/prop-lagoon-800.webp 800w, assets/img/prop-lagoon-1200.webp 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <img src="assets/img/prop-lagoon-800.jpg" srcset="assets/img/prop-lagoon-480.jpg 480w, assets/img/prop-lagoon-800.jpg 800w, assets/img/prop-lagoon-1200.jpg 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="1200" height="1500" loading="lazy" decoding="async" alt="Torre do Lagoon Home Club vista entre árvores, na Av. Laguna.">
+                </picture>
+              </div>
+              <div class="property-gallery__slide">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/prop-lagoon-2-480.avif 480w, assets/img/prop-lagoon-2-800.avif 800w, assets/img/prop-lagoon-2-1200.avif 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <source type="image/webp" srcset="assets/img/prop-lagoon-2-480.webp 480w, assets/img/prop-lagoon-2-800.webp 800w, assets/img/prop-lagoon-2-1200.webp 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <img src="assets/img/prop-lagoon-2-800.jpg" srcset="assets/img/prop-lagoon-2-480.jpg 480w, assets/img/prop-lagoon-2-800.jpg 800w, assets/img/prop-lagoon-2-1200.jpg 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="1200" height="622" loading="lazy" decoding="async" alt="Piscina do gourmet do Lagoon Home Club, vista de cima, com deck e sala de jantar integrada.">
+                </picture>
+              </div>
+              <div class="property-gallery__slide">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/prop-lagoon-3-480.avif 480w, assets/img/prop-lagoon-3-800.avif 800w, assets/img/prop-lagoon-3-1200.avif 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <source type="image/webp" srcset="assets/img/prop-lagoon-3-480.webp 480w, assets/img/prop-lagoon-3-800.webp 800w, assets/img/prop-lagoon-3-1200.webp 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw">
+                  <img src="assets/img/prop-lagoon-3-800.jpg" srcset="assets/img/prop-lagoon-3-480.jpg 480w, assets/img/prop-lagoon-3-800.jpg 800w, assets/img/prop-lagoon-3-1200.jpg 1200w" sizes="(min-width: 1200px) 30vw, (min-width: 640px) 45vw, 90vw" width="1200" height="622" loading="lazy" decoding="async" alt="Academia do Lagoon Home Club, com equipamentos de musculação e vista para o jardim.">
+                </picture>
+              </div>
+            </div>
             <div class="property-tags">
               <span class="tag tag--lancamento">Lançamento</span>
               <span class="tag tag--tipo">Studio</span>
+            </div>
+            <button type="button" class="property-gallery__arrow property-gallery__arrow--prev" aria-label="Foto anterior">‹</button>
+            <button type="button" class="property-gallery__arrow property-gallery__arrow--next" aria-label="Próxima foto">›</button>
+            <div class="property-gallery__dots">
+              <button type="button" class="is-active" aria-label="Foto 1 de 3"></button>
+              <button type="button" aria-label="Foto 2 de 3"></button>
+              <button type="button" aria-label="Foto 3 de 3"></button>
             </div>
           </div>
           <div class="property-card__body">
@@ -420,6 +478,10 @@
               <li>1 suíte + 1 dormitório</li>
               <li>Entrega mar/2030</li>
             </ul>
+            <a class="property-card__more" href="imoveis.html#lagoon-title">
+              Ver mais informações do imóvel
+              <svg width="12" height="12" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </a>
             <a class="property-card__cta" href="https://wa.me/" data-wa data-wa-msg="Olá! Quero mais informações sobre um imóvel!">
               Perguntar sobre este imóvel
               <svg width="14" height="14" aria-hidden="true"><use href="#icon-arrow"></use></svg>

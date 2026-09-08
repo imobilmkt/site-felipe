@@ -751,6 +751,21 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
 }
 .property-card__cta svg { width: 14px; height: 14px; transition: transform .25s var(--ease); }
 .property-card__cta:hover svg, .property-card__cta:focus-visible svg { transform: translateX(4px); }
+.property-card__more {
+  font-family: var(--font-inst);
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--claro);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s var(--ease);
+}
+.property-card__more svg { width: 12px; height: 12px; transition: transform .25s var(--ease); }
+.property-card__more:hover, .property-card__more:focus-visible { color: var(--musgo); }
+.property-card__more:hover svg, .property-card__more:focus-visible svg { transform: translateX(3px); }
 
 /* ---------- Assessor vs. portal ---------- */
 .assessor {
@@ -1073,7 +1088,7 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   transition: opacity 0.5s var(--ease);
 }
 .property-gallery__slide.is-active { opacity: 1; z-index: 1; }
-.feature-row__media .property-gallery__slide img {
+.property-gallery__slide img {
   width: 100%;
   height: 100%;
   aspect-ratio: auto;
