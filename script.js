@@ -109,17 +109,39 @@
 
   function setupFilters() {
     var tabGroups = document.querySelectorAll("[data-filter-tabs]");
+    if (!tabGroups.length) return;
+
+    // Vários grupos de abas podem mirar no mesmo target (ex.: tipo + metragem).
+    // Cada grupo guarda sua própria categoria ativa; um item só aparece se
+    // atender a categoria ativa de TODOS os grupos daquele target (lógica E).
+    var targets = [];
+    var targetsBySelector = {};
+
     tabGroups.forEach(function (tabs) {
-      var items = document.querySelectorAll(tabs.getAttribute("data-filter-target"));
-      var emptyEl = document.querySelector(tabs.getAttribute("data-filter-empty"));
-      var buttons = tabs.querySelectorAll(".filter-tab");
+      var targetSel = tabs.getAttribute("data-filter-target");
+      var target = targetsBySelector[targetSel];
+      if (!target) {
+        target = {
+          items: document.querySelectorAll(targetSel),
+          emptyEl: document.querySelector(tabs.getAttribute("data-filter-empty")),
+          groups: []
+        };
+        targetsBySelector[targetSel] = target;
+        targets.push(target);
+      }
+      target.groups.push({ buttons: tabs.querySelectorAll(".filter-tab"), active: "todos" });
+    });
+
+    targets.forEach(function (target) {
       var bgClasses = ["property-feature--papel", "property-feature--areia"];
 
-      function applyFilter(category) {
+      function apply() {
         var visible = 0;
-        items.forEach(function (item) {
+        target.items.forEach(function (item) {
           var cats = (item.getAttribute("data-category") || "").split(" ");
-          var show = category === "todos" || cats.indexOf(category) !== -1;
+          var show = target.groups.every(function (g) {
+            return g.active === "todos" || cats.indexOf(g.active) !== -1;
+          });
           item.hidden = !show;
           if (show) {
             item.classList.add("is-visible");
@@ -128,19 +150,24 @@
             visible++;
           }
         });
-        if (emptyEl) emptyEl.hidden = visible !== 0;
-        buttons.forEach(function (b) {
-          var active = b.getAttribute("data-category") === category;
-          b.classList.toggle("is-active", active);
-          b.setAttribute("aria-selected", String(active));
-        });
+        if (target.emptyEl) target.emptyEl.hidden = visible !== 0;
       }
 
-      buttons.forEach(function (b) {
-        b.addEventListener("click", function () {
-          applyFilter(b.getAttribute("data-category"));
+      target.groups.forEach(function (g) {
+        g.buttons.forEach(function (b) {
+          b.addEventListener("click", function () {
+            g.active = b.getAttribute("data-category");
+            g.buttons.forEach(function (bb) {
+              var active = bb === b;
+              bb.classList.toggle("is-active", active);
+              bb.setAttribute("aria-selected", String(active));
+            });
+            apply();
+          });
         });
       });
+
+      apply();
     });
   }
 

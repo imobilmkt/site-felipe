@@ -356,6 +356,7 @@
 
   <section class="filter-bar">
     <div class="container">
+      <p class="filter-group__label">Tipo</p>
       <div class="filter-tabs" data-filter-tabs data-filter-target=".property-feature" data-filter-empty="#imoveis-list-empty" role="tablist" aria-label="Filtrar imóveis por tipo">
         <button type="button" class="filter-tab is-active" data-category="todos" role="tab" aria-selected="true">Todos</button>
         <button type="button" class="filter-tab" data-category="condominio" role="tab" aria-selected="false">Condomínio fechado</button>
@@ -364,6 +365,16 @@
         <button type="button" class="filter-tab" data-category="alto" role="tab" aria-selected="false">Alto padrão (100 m²+)</button>
         <button type="button" class="filter-tab" data-category="comercial" role="tab" aria-selected="false">Comercial</button>
         <button type="button" class="filter-tab" data-category="pronto" role="tab" aria-selected="false">Pronto</button>
+      </div>
+      <p class="filter-group__label filter-group__label--metragem">Metragem</p>
+      <div class="filter-tabs" data-filter-tabs data-filter-target=".property-feature" data-filter-empty="#imoveis-list-empty" role="tablist" aria-label="Filtrar imóveis por metragem">
+        <button type="button" class="filter-tab is-active" data-category="todos" role="tab" aria-selected="true">Todos</button>
+        <button type="button" class="filter-tab" data-category="m-ate40" role="tab" aria-selected="false">Até 40 m²</button>
+        <button type="button" class="filter-tab" data-category="m-41-55" role="tab" aria-selected="false">41 a 55 m²</button>
+        <button type="button" class="filter-tab" data-category="m-56-69" role="tab" aria-selected="false">56 a 69 m²</button>
+        <button type="button" class="filter-tab" data-category="m-70-89" role="tab" aria-selected="false">70 a 89 m²</button>
+        <button type="button" class="filter-tab" data-category="m-90-119" role="tab" aria-selected="false">90 a 119 m²</button>
+        <button type="button" class="filter-tab" data-category="m-120mais" role="tab" aria-selected="false">Acima de 120 m²</button>
       </div>
       <div class="filter-empty" id="imoveis-list-empty" hidden>
         <p>Nenhum imóvel dessa categoria na carteira agora — me chama que eu aviso assim que entrar um.</p>
@@ -376,7 +387,7 @@
   </section>
 
   <!-- LA VIE CONCEPT -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="lavie-title" data-category="medio">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="lavie-title" data-category="medio m-41-55 m-56-69">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -437,7 +448,7 @@
   </section>
 
   <!-- QUINTA DOS PLÁTANOS -->
-  <section class="property-feature property-feature--areia reveal" aria-labelledby="quinta-title" data-category="condominio alto">
+  <section class="property-feature property-feature--areia reveal" aria-labelledby="quinta-title" data-category="condominio alto m-120mais">
     <div class="container">
       <div class="feature-row feature-row--reverse">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -499,7 +510,7 @@
   </section>
 
   <!-- FLORESTA 23 -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="floresta-title" data-category="condominio alto">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="floresta-title" data-category="condominio alto m-120mais">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -561,7 +572,7 @@
   </section>
 
   <!-- LAGOON HOME CLUB -->
-  <section class="property-feature property-feature--areia reveal" aria-labelledby="lagoon-title" data-category="medio">
+  <section class="property-feature property-feature--areia reveal" aria-labelledby="lagoon-title" data-category="medio m-41-55 m-56-69">
     <div class="container">
       <div class="feature-row feature-row--reverse">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -622,7 +633,7 @@
   </section>
 
   <!-- LITHOS -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="lithos-title" data-category="alto">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="lithos-title" data-category="alto m-120mais">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -684,7 +695,7 @@
   </section>
 
   <!-- OFFICE CIDADE ARUNA -->
-  <section class="property-feature property-feature--areia reveal" aria-labelledby="office-title" data-category="comercial">
+  <section class="property-feature property-feature--areia reveal" aria-labelledby="office-title" data-category="comercial m-41-55 m-56-69 m-70-89 m-90-119">
     <div class="container">
       <div class="feature-row feature-row--reverse">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -745,7 +756,7 @@
   </section>
 
   <!-- OG3 -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="og3-title" data-category="medio">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="og3-title" data-category="medio m-ate40 m-41-55 m-56-69">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -806,7 +817,7 @@
   </section>
 
   <!-- VILLA FELICITÀ -->
-  <section class="property-feature property-feature--areia reveal" aria-labelledby="villafelicita-title" data-category="medio">
+  <section class="property-feature property-feature--areia reveal" aria-labelledby="villafelicita-title" data-category="medio m-ate40 m-41-55 m-56-69">
     <div class="container">
       <div class="feature-row feature-row--reverse">
         <figure class="feature-row__media property-gallery" data-gallery>
@@ -867,7 +878,7 @@
   </section>
 
   <!-- ALPHAVILLE MARINGÁ -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="alphaville-title" data-category="condominio pronto alto">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="alphaville-title" data-category="condominio pronto alto m-120mais">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media">
@@ -900,7 +911,7 @@
   </section>
 
   <!-- RESIDENCIAL PABLO PICASSO -->
-  <section class="property-feature property-feature--areia reveal" aria-labelledby="pablopicasso-title" data-category="alto pronto">
+  <section class="property-feature property-feature--areia reveal" aria-labelledby="pablopicasso-title" data-category="alto pronto m-120mais">
     <div class="container">
       <div class="feature-row feature-row--reverse">
         <figure class="feature-row__media">
@@ -933,7 +944,7 @@
   </section>
 
   <!-- RESIDENCIAL GARDA -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="garda-title" data-category="medio pronto">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="garda-title" data-category="medio pronto m-56-69">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media">
@@ -965,7 +976,7 @@
   </section>
 
   <!-- SOUL A. YOSHII -->
-  <section class="property-feature property-feature--areia reveal" aria-labelledby="soulyoshii-title" data-category="alto pronto">
+  <section class="property-feature property-feature--areia reveal" aria-labelledby="soulyoshii-title" data-category="alto pronto m-90-119">
     <div class="container">
       <div class="feature-row feature-row--reverse">
         <figure class="feature-row__media">
@@ -997,7 +1008,7 @@
   </section>
 
   <!-- GALPÃO JARDIM ALVORADA -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="galpao-title" data-category="comercial pronto alto">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="galpao-title" data-category="comercial pronto alto m-120mais">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media">
@@ -1030,7 +1041,7 @@
   </section>
 
   <!-- TERRENOS JARDIM LICCE -->
-  <section class="property-feature property-feature--areia reveal" aria-labelledby="licce-title" data-category="comercial pronto alto">
+  <section class="property-feature property-feature--areia reveal" aria-labelledby="licce-title" data-category="comercial pronto alto m-120mais">
     <div class="container">
       <div class="feature-row feature-row--reverse">
         <figure class="feature-row__media">
@@ -1063,7 +1074,7 @@
   </section>
 
   <!-- LOTE TRAVESSA BARROSO -->
-  <section class="property-feature property-feature--papel reveal" aria-labelledby="barroso-title" data-category="pronto alto">
+  <section class="property-feature property-feature--papel reveal" aria-labelledby="barroso-title" data-category="pronto alto m-120mais">
     <div class="container">
       <div class="feature-row">
         <figure class="feature-row__media">

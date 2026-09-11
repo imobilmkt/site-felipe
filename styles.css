@@ -632,7 +632,17 @@ body.page-solid-header .site-header .btn-wa:hover, body.page-solid-header .site-
   padding-block: 40px;
   border-bottom: 1px solid var(--salvia);
 }
-.filter-bar .filter-tabs { margin-top: 0; }
+.filter-bar .filter-tabs { margin-top: 12px; }
+.filter-group__label {
+  margin-top: 28px;
+  font-family: var(--font-inst);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--claro);
+}
+.filter-group__label--metragem { margin-top: 24px; }
 .filter-tabs {
   margin-top: 32px;
   display: flex;
